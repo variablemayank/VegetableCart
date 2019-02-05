@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
 import Product from './Product'
 import Title from './Title';
+import {storeProducts} from '../data';
+
 export default class ProductList extends Component {
 
-  // constructor()
-  // {
-      
+  state = {
+    product : storeProducts,
+  }
 
-  //     this.state = {
-  //       products:[]
-  //     }
-  // }
   render() {
-    
+    console.log(this.state.product);
     return (
       <React.Fragment>
       <div className ="py-5">
