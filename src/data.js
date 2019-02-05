@@ -62,7 +62,7 @@ export const storeProducts = [
     {
       id: 6,
       title: "Watermellon",
-      img: "img/watermallon",
+      img: "img/watermellon.png",
       price: 17,
       company: "Vegetables",
       info:
@@ -73,7 +73,7 @@ export const storeProducts = [
     },
     {
       id: 7,
-      title: "Iphone 7",
+      title: "Marucuna",
       img: "img/marucuna.png",
       price: 30,
       company: "Vegetables",
