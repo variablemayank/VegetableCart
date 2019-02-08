@@ -87,6 +87,7 @@ removeItem = (id) => {
 clearCart = (id) => {
     console.log("this is the clear cart");
 }
+
 render() {
     return (
       <ProductContext.Provider value={{
