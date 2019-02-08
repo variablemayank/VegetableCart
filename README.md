@@ -1,5 +1,15 @@
 #### Vegetable Cart 
+#### DEMO 
 
+
+### VEGGY LIST
+![](https://github.com/variablemayank/VegetableCart/blob/master/public/img/a2.png)
+### CART ITEMS
+![](https://github.com/variablemayank/VegetableCart/blob/master/public/img/a1.png)
+### DETAILS
+![](https://github.com/variablemayank/VegetableCart/blob/master/public/img/a3.png)
+### MODAL
+![](https://github.com/variablemayank/VegetableCart/blob/master/public/img/a4.png)
 ## Available Scripts
 In the project directory, you can install:
 
