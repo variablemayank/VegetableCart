@@ -12,7 +12,6 @@ import Cart from './components/Cart';
 import Default from './components/Default';
 import Modal from './components/Modal';
 
-  
 class App extends Component {
   render() {
     return (
