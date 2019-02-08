@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import logo from '../q.svg'
+import logo from '../gg.png'
 import styled from 'styled-components'
 
  
@@ -33,7 +33,7 @@ export default class Navbar extends Component {
         <ul className = "navbar-nav align-items-center">
           <li className ="nav-items ml-5">
             <Link to ="/" className ="nav-link"> 
-              Vegetables
+              Vegetables Shopping Cart 
             </Link>
           </li>
 
@@ -74,9 +74,9 @@ const ButtonContainer = styled.button`
 
 const NavWrapper = styled.nav `
  background: var(--green);
- height:85px;
+ height:70px;
  .nav-link{
-     color:var(--mainWhite)!important;
+     color:var(--blue)!important;
      font-size:1.3rem;
      text-transform:capitalize;
  }

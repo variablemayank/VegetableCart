@@ -47,7 +47,7 @@ const ProductContext = React.createContext();
       })
 }
  
-  addToCart = (id) => {
+addToCart = (id) => {
      let tempProducts = [...this.state.products];
      const index = tempProducts.indexOf(this.getItem(id));
      const product = tempProducts[index];
