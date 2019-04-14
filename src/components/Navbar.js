@@ -6,6 +6,8 @@ import styled from 'styled-components'
  
 export default class Navbar extends Component {
 
+
+
   // const NavWrapper = styled.nav `
   //   background: var(--mainBlue);
   //   .nav-link{
@@ -14,18 +16,29 @@ export default class Navbar extends Component {
   //       text-transform:capitalize;
   //   }`
 
-  render() {
+  constructor()
+  {
+    super();
+    this.filterlist = this.filterlist.bind(this);
 
-    
-    
+  }
+
+  filterlist(e)
+  {
+    e.preventDefault();
+    console.log(e.target.value);
+  }
+
+  render() {
     return (
       <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
+        
       {/* https://www.iconfinder.com/icons/1243689/call_phone_icon
         Creative Commons (Attribution 3.0 Unported);
         https://www.iconfinder.com/Makoto_msk  */}
       
 
-        <Link to= "/" >
+        <Link to= "/">
           <img src = {logo} alt = "store"
           className = "navbar-brand" />
         </Link>
@@ -37,7 +50,29 @@ export default class Navbar extends Component {
             </Link>
           </li>
 
+        <Link to ="/login" className ="ml-auto">
+          <ButtonContainer>
+            <i className ="fas fa-cart-plus"/>
+            Login
+          </ButtonContainer>
+        </Link>
+        <Link to ="/login" className ="ml-auto">
+          <ButtonContainer>
+            <i className ="fas fa-cart-plus"/>
+            SignUp
+          </ButtonContainer>
+        </Link>
         </ul>
+        <form>
+          <fieldset className="form-group">
+          <input type="text"  style = {{width:'200%'}} className="form-control form-control-lg" placeholder="Search" onChange={e => {
+            {/* e.preventDefault(); */}
+            {/* console.log(e.target.value) */}
+            this.filterlist(e);
+          }}/>
+          </fieldset>
+        </form>
+        
         <Link to= "/cart" className="ml-auto">
           <ButtonContainer>
             <i className = "fas fa-cart-plus"/>

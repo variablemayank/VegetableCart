@@ -35,15 +35,13 @@ export default class Modal extends Component {
                             </ButtonContainer>
                             </Link>
                             </div>
-
                             </div>
-
                             </div>
                         </ModalContainer>
                         )
                     }
                 }}
-            </ProductConsumer>
+        </ProductConsumer>
     )
   }
 }
