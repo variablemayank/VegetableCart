@@ -8,16 +8,68 @@ export default class ProductList extends Component {
     // console.log(this.state.product);
     return (
       <React.Fragment>
-      <div className ="py-5">
+        <ProductConsumer>
+          {value => {
+            console.log("value is" ,value);
+            return (
+              <div className ="py-5">
+                <div className ="container">
+                <Title name ="our" title ="vegetables" />
+                {/* <div className ="row"> */}
+                  <form>
+                    <fieldset className="form-group">
+                      <input
+                        type="text"
+                        style={{ width: "100%" }}
+                        className="form-control form-control-lg"
+                        placeholder="Search"
+                        onChange={e => {
+                          e.preventDefault();
+                          console.log(e.target.value);
+                          value.handleFilterProduct(e.target.value);
+                        }}
+                      />
+                    </fieldset>
+                  </form>
+                  <div className="row">
+                    {
+                      value.filteredProducts.length ? value.filteredProducts.map(product => {
+                        return (<Product key ={product.id} product= {product}/>)
+                      }) :  value.products.map(product => {  return (<Product key={product.id} product={product}/>) })
+                    }
+                  </div>
+                  {/* </div> */}
+            </div>
+            </div>)
+          }}
+        </ProductConsumer>
+      {/* <div className ="py-5">
         <div className ="container">
             <Title name ="our" title ="vegetables" />
-
-
             <div className ="row">
+
+            <form>
+              <fieldset className="form-group">
+                <input 
+                  type="text"
+                  style={{ width: "200%" }}
+                  className="form-control form-control-lg"
+                  placeholder="Search"
+                  onChange={e => {
+                    console.log(e.target.value);
+                    <ProductConsumer>
+                      {value => {
+                        console.log(value);
+                      }}
+                    </ProductConsumer>
+                  }}
+                />
+              </fieldset>
+            </form>
+              
             <ProductConsumer>
               {value => {
-                const productList = value.filteredProducts.length>0?value.filteredProducts:value.products;
-                return productList.map(product => {
+                return value.products.map(product => {
                   return <Product key={product.id} product ={product} />
                 })
               }}
@@ -25,7 +77,7 @@ export default class ProductList extends Component {
             </div>
         </div>
 
-      </div>
+      </div> */}
       
       </React.Fragment>
     )

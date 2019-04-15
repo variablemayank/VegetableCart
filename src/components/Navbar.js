@@ -53,7 +53,7 @@ export default class Navbar extends Component {
                 </ButtonContainer>
               </Link>
             </ul>
-            <form>
+            {/* <form>
               <fieldset className="form-group">
                 <input
                   type="text"
@@ -66,7 +66,7 @@ export default class Navbar extends Component {
                   }}
                 />
               </fieldset>
-            </form>
+            </form> */}
 
             <Link to="/cart" className="ml-auto">
               <ButtonContainer>
