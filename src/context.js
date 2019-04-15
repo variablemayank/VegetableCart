@@ -9,6 +9,7 @@ const ProductContext = React.createContext();
   
   state = {
       products: [],
+      filteredProducts:[],
       detailProduct: detailProduct,
       cart: [],
       modalOpen: false,
@@ -47,6 +48,14 @@ const ProductContext = React.createContext();
       })
 }
  
+ handleFilterProduct = (title) => {
+     let currentProduct = [...this.state.products];
+     let filteredProduct = currentProduct.filter(product => product.title.toLowerCase().includes(title.toLowerCase()));
+     console.log('jiadsbhvfeab',filteredProduct);
+     this.setState(()=> {
+         return {filteredProducts:filteredProduct}
+     })
+ }
 addToCart = (id) => {
      let tempProducts = [...this.state.products];
      const index = tempProducts.indexOf(this.getItem(id));
@@ -170,7 +179,8 @@ render() {
           increment:this.increment,
           decrement:this.decrement,
           removeItem:this.removeItem,
-          clearCart:this.clearCart
+          clearCart:this.clearCart,
+          handleFilterProduct:this.handleFilterProduct,
       }} >
         {this.props.children}
       </ProductContext.Provider>
