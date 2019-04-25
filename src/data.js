@@ -25,7 +25,7 @@ export const storeProducts = [
     },
     {
       id: 3,
-      title: "Dont Know",
+      title: "Capsicum",
       img: "img/dont.png",
       price: 8,
       company: "Vegetables",
